@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@valeria-ui/tsconfig": "*",
+    "@valeria-ui/styles": "*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
     "eslint": "^8.15.0",
