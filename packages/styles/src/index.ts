@@ -1,14 +1,19 @@
-import { createStitches } from "@stitches/react";
+import { createStitches, globalCss } from "@stitches/react";
 
 const { styled } = createStitches({
   theme: {
     colors: {
-      "brand-primary": "#E7FF54",
-      "brand-secondary-1": "#F5FFE8",
-      "brand-secondary-2": "#efcdcd",
-      "brand-secondary-3": "#fff7cc",
-      "brand-secondary-4": "#aabcd7",
-      "brand-secondary-5": "#dadecc",
+      "brand-primary-main": "#445900",
+      "brand-primary-border": "#9BA285",
+      "brand-primary-focus": "#C1C8AA",
+      "brand-primary-hover": "#2D3B00",
+      "brand-primary-pressed": "#222c00",
+
+      "brand-secondary-main": "#E7FF54",
+      "brand-secondary-border": "#FBFFA9",
+      "brand-secondary-focus": "#F7FFE0",
+      "brand-secondary-hover": "#B3D40F",
+      "brand-secondary-pressed": "#445900",
 
       "neutral-dark": "#090909",
       "neutral-light": "#f7f7f7",
@@ -52,6 +57,7 @@ const { styled } = createStitches({
     borderStyles: {},
     radii: {
       base: "4px",
+      medium: "8px",
     },
     shadows: {
       2: " 0px 2px 4px rgba(0, 0, 0, 0.12)",
@@ -66,4 +72,12 @@ const { styled } = createStitches({
   },
 });
 
-export { styled };
+const globalStyles = globalCss({
+  "*": {
+    margin: 0,
+    padding: 0,
+    border: "none",
+  },
+});
+
+export { styled, globalStyles };
